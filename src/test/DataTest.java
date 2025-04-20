@@ -20,10 +20,10 @@ public class DataTest {
         Guest guest1 = new Guest("Adéla", "Malíková", LocalDate.of(1993, 3, 13));
         Guest guest2 = new Guest("Jan", "Dvořáček", LocalDate.of(1995, 5, 5));
 
-        DebugManager.print(ConsoleColor.BLUE + "Editing birthdate of guest2: " + guest2);
+        DebugManager.print(ConsoleColor.BLUE + "Updating birthdate of guest2: " + guest2);
         guest2.setBirthDate(LocalDate.of(1995, 4, 5));
 
-        DebugManager.print(ConsoleColor.BLUE + "Updated guest2: " + guest2);
+        DebugManager.print(ConsoleColor.BLUE + "Updated birthdate of guest2: " + guest2);
 
         DebugManager.print(ConsoleColor.BLUE + "Creating 3 rooms:");
         Room room1 = new Room(1, 1, true, true, 1000);
