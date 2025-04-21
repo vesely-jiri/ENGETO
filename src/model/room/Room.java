@@ -45,19 +45,20 @@ public class Room {
         return reservations;
     }
 
-    public void reserveRoom(Guest guest) {
-        reserveRoom(guest, LocalDate.now(), LocalDate.now().plusDays(6));
+    public RoomReservation getReservation(int id) {
+        for (RoomReservation reservation : reservations) {
+            if (reservation.getId() == id) {
+                return reservation;
+            }
+        }
+        return null;
     }
 
-    public void reserveRoom(List<Guest> guests) {
-        reserveRoom(guests, LocalDate.now(), LocalDate.now().plusDays(6));
+    public void reserveRoom(RoomReservationRequest reservation) {
+        reserveRoom(reservation.getGuests(), reservation.getFrom(), reservation.getTo(), reservation.getType());
     }
 
-    public void reserveRoom(Guest guest, LocalDate from, LocalDate to) {
-        reserveRoom(List.of(guest), from, to);
-    }
-
-    public void reserveRoom(List<Guest> guests, LocalDate from, LocalDate to) {
+    public void reserveRoom(List<Guest> guests, LocalDate from, LocalDate to, BookingType type) {
         if (guests.size() > capacity) {
             DebugManager.printError(NOT_ENOUGH_CAPACITY.replace("%d", String.valueOf(roomId)));
             return;
@@ -68,11 +69,22 @@ public class Room {
                 return;
             }
         }
-        reservations.add(new RoomReservation(from, to, guests));
+        reservations.add(new RoomReservation(from, to, guests, type, this.getRoomId()));
     }
+
+
 
     private boolean datesOverlap(LocalDate from1, LocalDate to1, LocalDate from2, LocalDate to2) {
         return from1.isBefore(to2) && to1.isAfter(from2);
+    }
+
+    public static Room getRoomFromId(int roomId) {
+        for (Room room : rooms) {
+            if (room.getRoomId() == roomId) {
+                return room;
+            }
+        }
+        return null;
     }
 
     public int getRoomId() {

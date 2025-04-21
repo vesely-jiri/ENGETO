@@ -32,6 +32,9 @@ public class Guest {
     public static List<Guest> getGuests() {
         return guests;
     }
+    public String getFullName() {
+        return firstName + " " + lastName;
+    }
     public String getFirstName() {
         return firstName;
     }
