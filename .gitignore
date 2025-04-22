@@ -30,7 +30,6 @@ bin/
 
 ###----------------------------------------------------------------------
 #User defined patterns
-.idea/
-
+.idea/*
 !.idea/modules.xml
 !.idea/runConfigurations/
