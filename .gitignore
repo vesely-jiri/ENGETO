@@ -27,3 +27,9 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+###----------------------------------------------------------------------
+#User defined patterns
+.idea/*
+!.idea/modules.xml
+!.idea/runConfigurations/
