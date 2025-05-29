@@ -1,3 +1,8 @@
+package cz.jpcz.firsthomework;
+
+import cz.jpcz.firsthomework.util.ConsoleColor;
+import cz.jpcz.firsthomework.util.DebugManager;
+
 import java.time.LocalDate;
 
 public class Seller {
@@ -7,13 +12,13 @@ public class Seller {
     private Double soldCarrotsInTons;
     private boolean senior;
 
-    Seller(){}
     Seller(String name, LocalDate birthDate, Integer contracts, Double soldCarrotsInTons, boolean senior){
         this.name = name;
         this.birthDate = birthDate;
         this.contracts = contracts;
         this.soldCarrotsInTons = soldCarrotsInTons;
         this.senior = senior;
+        DebugManager.print(ConsoleColor.BLUE + "Created seller: " + this);
     }
 
     public String getName() {
@@ -54,5 +59,16 @@ public class Seller {
 
     public void setSenior(boolean senior) {
         this.senior = senior;
+    }
+
+    @Override
+    public String toString() {
+        return "Seller{" +
+                "name='" + name + '\'' +
+                ", birthDate=" + birthDate +
+                ", contracts=" + contracts +
+                ", soldCarrotsInTons=" + soldCarrotsInTons +
+                ", senior=" + senior +
+                '}';
     }
 }
