@@ -1,4 +1,4 @@
-package util;
+package cz.jpcz.secondthirdhomework.util;
 
 public enum ConsoleColor {
     RESET("\u001B[0m"),

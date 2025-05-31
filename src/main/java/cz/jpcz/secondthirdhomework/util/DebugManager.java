@@ -1,4 +1,4 @@
-package util;
+package cz.jpcz.secondthirdhomework.util;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
