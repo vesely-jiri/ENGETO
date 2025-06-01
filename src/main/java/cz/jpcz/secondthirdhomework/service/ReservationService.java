@@ -1,13 +1,11 @@
 package cz.jpcz.secondthirdhomework.service;
 
-import cz.jpcz.secondthirdhomework.application.HotelManager;
 import cz.jpcz.secondthirdhomework.exception.AlreadyReservedException;
 import cz.jpcz.secondthirdhomework.exception.NoCapacityException;
 import cz.jpcz.secondthirdhomework.model.Guest;
 import cz.jpcz.secondthirdhomework.model.builder.RoomReservationRequest;
 import cz.jpcz.secondthirdhomework.model.room.Room;
 import cz.jpcz.secondthirdhomework.model.room.RoomReservation;
-import cz.jpcz.secondthirdhomework.util.DebugManager;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

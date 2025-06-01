@@ -13,6 +13,9 @@ import cz.jpcz.secondthirdhomework.util.DebugManager;
 import java.time.LocalDate;
 import java.util.List;
 
+/**
+ * Data test for Lekce 2 - Hotel
+ */
 public class DataTest1 {
     public static void run() {
         DebugManager.setDebug(true);

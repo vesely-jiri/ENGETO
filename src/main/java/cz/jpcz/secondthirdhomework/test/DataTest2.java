@@ -13,6 +13,9 @@ import cz.jpcz.secondthirdhomework.analytics.ComparisonType;
 import java.time.LocalDate;
 import java.util.List;
 
+/**
+ * Data test for Lekce 3 - Hotel - evidence rezervací
+ */
 public class DataTest2 {
     public static void run() {
         DebugManager.setDebug(true);
