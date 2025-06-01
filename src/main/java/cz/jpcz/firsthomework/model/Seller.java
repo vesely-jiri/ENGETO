@@ -1,4 +1,4 @@
-package cz.jpcz.firsthomework;
+package cz.jpcz.firsthomework.model;
 
 import cz.jpcz.firsthomework.util.ConsoleColor;
 import cz.jpcz.firsthomework.util.DebugManager;
@@ -12,7 +12,7 @@ public class Seller {
     private Double soldCarrotsInTons;
     private boolean senior;
 
-    Seller(String name, LocalDate birthDate, Integer contracts, Double soldCarrotsInTons, boolean senior){
+    public Seller(String name, LocalDate birthDate, Integer contracts, Double soldCarrotsInTons, boolean senior){
         this.name = name;
         this.birthDate = birthDate;
         this.contracts = contracts;

@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
 
     <name>First Homework</name>
-    <description>Homework for ENGETO java course</description>
+    <description>First homework for ENGETO java course</description>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
